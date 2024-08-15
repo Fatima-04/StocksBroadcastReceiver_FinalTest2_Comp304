@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Title TextView -->
+    <TextView
+        android:id="@+id/title_stock_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Stock Information"
+        android:textColor="@android:color/black"
+        android:textSize="37sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Insert Stocks Button -->
+    <Button
+        android:id="@+id/button_insert_stocks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Insert Stocks"
+        android:textSize="27sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_stock_info" />
+
+    <!-- RadioGroup with RadioButtons -->
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="217dp"
+        android:layout_height="197dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_insert_stocks">
+
+        <RadioButton
+            android:id="@+id/rad_googl"
+            android:layout_width="match_parent"
+            android:layout_height="67dp"
+            android:text="GOOGL"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/rad_amzn"
+            android:layout_width="match_parent"
+            android:layout_height="67dp"
+            android:text="AMZN"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/rad_ssnlf"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:text="SSNLF"
+            android:textSize="20sp" />
+    </RadioGroup>
+
+    <!-- Display Stock Info Button -->
+    <Button
+        android:id="@+id/btn_display_stock_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Display Stock Info"
+        android:textSize="27sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <!-- Stock Information TextView -->
+    <TextView
+        android:id="@+id/txt_view_stock_info"
+        android:layout_width="384dp"
+        android:layout_height="229dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:background="@android:color/darker_gray"
+        android:padding="16dp"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_display_stock_info" />
+</androidx.constraintlayout.widget.ConstraintLayout>
